@@ -1,0 +1,18 @@
+<!--
+  After scaffolding native platform folders with `flutter create .`, merge
+  the following into android/app/src/main/AndroidManifest.xml (inside the
+  <manifest> tag, as siblings of <application>), and set
+  android.defaultConfig.minSdk = 24 in android/app/build.gradle.
+-->
+
+<!-- Needed on Android 12L and below to save images to the gallery -->
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    android:maxSdkVersion="32" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    android:maxSdkVersion="32" />
+
+<!-- Needed on Android 13+ to read images (for permission_handler Permission.photos) -->
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+<!-- Needed by share_plus / gal to write files for sharing and saving -->
+<uses-permission android:name="android.permission.INTERNET" />

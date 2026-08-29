@@ -1,0 +1,71 @@
+name: qr_code_generator
+description: "A production-ready QR Code Generator app built with Flutter."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State management
+  provider: ^6.1.2
+
+  # Local storage
+  shared_preferences: ^2.2.3
+
+  # Fonts
+  google_fonts: ^6.2.1
+
+  # QR generation
+  qr_flutter: ^4.1.0
+
+  # Save image to gallery
+  vision_gallery_saver: ^3.1.1
+
+  # Sharing
+  share_plus: ^11.0.0
+
+  # File system paths
+  path_provider: ^2.1.3
+
+  # Permissions
+  permission_handler: ^11.3.1
+
+  # Date formatting
+  intl: ^0.19.0
+
+  # Unique IDs for history items
+  uuid: ^4.4.0
+
+  # Opening external links (privacy policy, etc.)
+  url_launcher: ^6.3.0
+
+  # Rendering widgets to image (for saving/sharing QR as PNG)
+  # (uses Flutter's built-in RepaintBoundary, no extra package required)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  # Uncomment and add font files if bundling Poppins locally instead of
+  # fetching via google_fonts at runtime.
+  # fonts:
+  #   - family: Poppins
+  #     fonts:
+  #       - asset: assets/fonts/Poppins-Regular.ttf
+  #       - asset: assets/fonts/Poppins-Bold.ttf
+  #         weight: 700
